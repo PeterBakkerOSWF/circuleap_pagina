@@ -6,7 +6,9 @@ views = Blueprint(__name__, "views")
 def home():
     return render_template("index.html")
 
-
+@views.route('score')
+def score():
+    return render_template("score_team.html", results = results)
 
 
 @views.route("profile")
