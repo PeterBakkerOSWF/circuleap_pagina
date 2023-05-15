@@ -3,10 +3,10 @@ from paramerters import ar, compliance, designer, builder, coll_raticum, delta, 
 from paramerters import investment_cost, seller, time_to_market, yield_reman
 import numpy as np
 
-print(pr)
-print(asset)
-print(sa)
-print(de)
+#print(pr)
+#print(asset)
+#print(sa)
+#print(de)
 
 production = pr
 development = de
@@ -145,9 +145,9 @@ score_team_ronde = [["turnover", d_eco_turnover], ["Total cost", d_eco_total_cos
                     ["leadtime SC reman incl coll", d_leadtime_sc_reman_incl_coll_weeks],
                     ["Gross margin", d_eco_gross_margin]]
 
-print(score_team_ronde)
+#print(score_team_ronde)
 results = np.array(score_team_ronde)
-print (results)
+#print (results)
     # print(score_team_ronde)
     ##class kpi(object):
     #  """docstring for kpi"""
