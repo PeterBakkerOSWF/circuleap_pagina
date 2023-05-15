@@ -8,7 +8,7 @@ def home():
 
 @views.route('score')
 def score():
-    return render_template("score_team.html", results = results)
+    return render_template("score_team.html", results=results)
 
 
 @views.route("profile")
