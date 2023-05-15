@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>de resultaten</title>
+</head>
+<body>
+    <h1>Team</h1>
+    <table>
+        <tr>
+            <th>kpi</th>
+            <th>waarde</th>
+            <th></th>
+        </tr>
+        {% for result in results %}
+        <tr>
+            {% for cell in result %}
+                <td>{{ cell }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
