@@ -126,7 +126,7 @@ d_eco_profit = d_eco_turnover - d_eco_total_cost
 d_eco_gross_margin = d_eco_profit / d_eco_turnover * 100
 d_eco_after_tax = d_eco_gross_margin * 0.6
 
-score_team_ronde = [["turnover", d_eco_turnover], ["Total cost", d_eco_total_cost], ["profit", d_eco_profit],
+score_team_ronde = [["turnover",  int(d_eco_turnover)], ["Total cost", int(d_eco_total_cost)], ["profit", int(d_eco_profit)],
                     ["gross margin", d_eco_gross_margin], ["CO2/ton", d_carbon_footprint_co2],
                     ["footprint incl use", d_carbon_footprint_use], ["total recovery", d_circular_total_recovery],
                     ["footprint p product", d_carbon_total_footprint], ["IT-cost", d_eco_it_cost],
