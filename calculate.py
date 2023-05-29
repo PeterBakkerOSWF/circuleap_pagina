@@ -74,7 +74,7 @@ d_eco_penalty_non_compliance_ar = 0
 if d_circular_collection_rate < 70:
     d_eco_penalty_non_compliance_ar += coll_raticum[20]
 if d_circular_reuse_rate + d_circular_recycle_rate < 80:
-    d_eco_penalty_non_compliance_ar += yield_reman[12][0]
+    d_eco_penalty_non_compliance_ar += yield_reman[23]
 
 d_leadtime_to_market = time_to_market[1] * development[0] + development[1] * time_to_market[9]
 d_leadtime_to_market += time_to_market[17] * development[2]
@@ -127,23 +127,23 @@ d_eco_gross_margin = d_eco_profit / d_eco_turnover * 100
 d_eco_after_tax = d_eco_gross_margin * 0.6
 
 score_team_ronde = [["turnover",  int(d_eco_turnover)], ["Total cost", int(d_eco_total_cost)], ["profit", int(d_eco_profit)],
-                    ["gross margin", d_eco_gross_margin], ["CO2/ton", d_carbon_footprint_co2],
-                    ["footprint incl use", d_carbon_footprint_use], ["total recovery", d_circular_total_recovery],
-                    ["footprint p product", d_carbon_total_footprint], ["IT-cost", d_eco_it_cost],
-                    ["carbon fee", d_eco_carbon_fee], ["after tax", d_eco_after_tax],
-                    ["production", d_carbon_footprint_production], ["development", d_carbon_footprint_development],
-                    ["after tax", d_eco_after_tax], ["Reuserate", d_circular_reuse_rate],
-                    ["recycle rate", d_circular_recycle_rate], ["collection rate", d_circular_collection_rate],
-                    ["total volume", d_market_total_volume], ["cannibalisation", d_market_cannibalisation_volume],
-                    ["collected volume", d_market_volume_collected_products],
-                    ["reman internal volume", d_market_volume_cores_reman_internal],
-                    ["reman external; buy", d_market_volume_cores_reman_external_buy],
-                    ["time to market", d_leadtime_to_market],
-                    ["leadtime new SC virgin", d_leadtime_new_sc_virgin_weeks],
-                    ["leadtime new recycled", d_leadtime_new_sc_recycled_weeks],
-                    ["leadtime collection", d_leadtime_collection_weeks],
-                    ["leadtime SC reman incl coll", d_leadtime_sc_reman_incl_coll_weeks],
-                    ["Gross margin", d_eco_gross_margin]]
+                    ["gross margin", int(d_eco_gross_margin)], ["CO2/ton", int(d_carbon_footprint_co2)],
+                    ["footprint incl use", int(d_carbon_footprint_use)], ["total recovery", int(d_circular_total_recovery)],
+                    ["footprint p product", int(d_carbon_total_footprint)], ["IT-cost", int(d_eco_it_cost)],
+                    ["carbon fee", int(d_eco_carbon_fee)], ["after tax", int(d_eco_after_tax)],
+                    ["production", int(d_carbon_footprint_production)], ["development", int(d_carbon_footprint_development)],
+                    ["after tax", int(d_eco_after_tax)], ["Reuserate", int(d_circular_reuse_rate)],
+                    ["recycle rate", int(d_circular_recycle_rate)], ["collection rate", int(d_circular_collection_rate)],
+                    ["total volume", int(d_market_total_volume)], ["cannibalisation", int(d_market_cannibalisation_volume)],
+                    ["collected volume", int(d_market_volume_collected_products)],
+                    ["reman internal volume",int(d_market_volume_cores_reman_internal)],
+                    ["reman external; buy", int(d_market_volume_cores_reman_external_buy)],
+                    ["time to market", int(d_leadtime_to_market)],
+                    ["leadtime new SC virgin", int(d_leadtime_new_sc_virgin_weeks)],
+                    ["leadtime new recycled", int(d_leadtime_new_sc_recycled_weeks)],
+                    ["leadtime collection", int(d_leadtime_collection_weeks)],
+                    ["leadtime SC reman incl coll", int(d_leadtime_sc_reman_incl_coll_weeks)],
+                    ["Gross margin", int(d_eco_gross_margin)]]
 
 #print(score_team_ronde)
 results = np.array(score_team_ronde)
