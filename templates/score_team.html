@@ -6,16 +6,32 @@
 <body>
     <h1>Team</h1>
     <table>
+        <tr><th>development</th><th>TRUE</th><th>production</th><th>TRUE</th><th>sales</th><th>TRUE</th><th>asset_recovery</th><th>TRUE</th></tr>
+        <tr><td>recyclability</td><td>{{development[0]}}</td><td>source recycled</td><td>{{production[0]}}</td>
+        <td>premium price</td><td>{{sales[0]}}</td><td>advanced collection</td><td>{{asset[0]}}</td></tr>
+
+        <tr><td>modularity</td><td>{{development[1]}}</td><td>produce new</td><td>{{production[1]}}</td>
+        <td>budget price reman</td><td>{{sales[1]}}</td><td>recycling only</td><td>{{asset[1]}}</td></tr>
+
+        <tr><td>disassembility</td><td>{{development[2]}}</td><td>produce reman</td><td>{{production[2]}}</td>
+        <td>circular business model</td><td>{{sales[2]}}</td><td>quality management</td><td>{{asset[2]}}</td></tr>
+
+        <tr><td>sensors built in</td><td>{{development[3]}}</td><td>modernize ERP</td><td>{{production[3]}}</td>
+        <td>liberal return policy</td><td>{{sales[3]}}</td><td>automation</td><td>{{asset[3]}}</td></tr>
+
         <tr>
-            <th>kpi</th>
-            <th>waarde</th>
+    </table>
+    <br><br>
+    <table>
+        <tr>
+            <th>KPI</th>
+            <th>AMOUNT</th>
             <th></th>
         </tr>
         {% for result in results %}
         <tr>
-            {% for cell in result %}
-                <td>{{ cell }}</td>
-            {% endfor %}
+            <td>{{ result[0] }}</td>
+            <td>{{ result[1] }}</td>
         </tr>
         {% endfor %}
     </table>
