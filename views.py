@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, request, jsonify, url_for
-from calculate import results
+from calculate import results, pr, de, sa, asset
 
 views = Blueprint(__name__, "views")
 
@@ -9,7 +9,7 @@ def home():
 
 @views.route('score')
 def score():
-    return render_template("score_team.html", results=results)
+    return render_template("score_team.html", results=results, development=de, production=pr, sales=sa, asset=asset)
 
 
 @views.route("profile")
